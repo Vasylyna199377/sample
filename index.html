@@ -1,68 +1,52 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <title>Local Weather</title>
-        
         <link rel="icon" type="image/vnd.microsoft.icon" href="images/faviconka_ru_16.ico">
-
-        <link rel="stylesheet" href="reset.css" type="text/css" />
-        <link rel="stylesheet" href="index.css" type="text/css" />
+        <link rel="stylesheet" href="styles/reset.css" type="text/css" />
+        <link rel="stylesheet" href="styles/index.css" type="text/css" />
     </head>
-    
     <body>
         <!--Unit responsible for page title -->
         <header>
             <h1>L'viv, Ukraine Weather</h1>
             <a href="http://www.accuweather.com/en/ua/national/satellite"><img src="images/flag.png" width="70" height="70"></img></a>
-            <!--<div id="header-title"></div>-->
         </header>
-        
         <!--Storage container the weather for the current day -->
         <div id='today-weather-container'>
-                <div id="icon-current-time">
-                    
-                </div> 
-                
-                <div id="current-weather-box">    
-                    <div id="current-temperature"></div>
-                    <div id="main-current"></div>
-                    <div id="min-temperature"></div>
-                    <div id="max-temperature"></div>
-                    <div id="wind-day"></div>
-                    <div id="humidity-day"></div>
-                </div>
-                
-                <table border="1" style="width:30%">
-                    <tr>
-                        <td>Afternoon</td>
-                        <td id="afternoon"></td>
-                        <td id="main-afternoon"></td>
-                    </tr>
-                    <tr>
-                        <td>Evening</td>
-                        <td id="evening"></td>
-                        <td id="main-evening"></td>
-                    </tr>
-                    <tr>
-                        <td>Night</td>
-                        <td id="night"></td>
-                        <td id="main-night"></td>
-                    </tr>
-                </table>
-
+            <div id="icon-current-time"></div> 
+            <div id="current-weather-box">    
+                <div id="current-temperature"></div>
+                <div id="main-current"></div>
+                <div id="min-temperature"></div>
+                <div id="max-temperature"></div>
+                <div id="wind-day"></div>
+                <div id="humidity-day"></div>
+            </div>
+            <!--Created table for the current day weather-->
+            <table>
+                <tr>
+                    <td>Afternoon</td>
+                    <td id="afternoon"></td>
+                    <td id="main-afternoon"></td>
+                </tr>
+                <tr>
+                    <td>Evening</td>
+                    <td id="evening"></td>
+                    <td id="main-evening"></td>
+                </tr>
+                <tr>
+                    <td>Night</td>
+                    <td id="night"></td>
+                    <td id="main-night"></td>
+                </tr>
+            </table>
         </div>
-        
         <!--Storage container the weather on the 6 days-->
-        <main id="weather-container">
-            
-        </main>
-        
+        <main id="weather-container"></main>
         <p id="error"></p>
-        
         <!--Connected file index.js and library jquery-->
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
-    
 </html>

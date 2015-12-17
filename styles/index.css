@@ -1,7 +1,6 @@
 html, body {
     height:100%; 
     width:100%;
-    
 }
 
 body {
@@ -14,7 +13,7 @@ header{
     font-size: 80px;
     letter-spacing: 4px;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 1);
-    list-style-image: url(images/flag.png);
+    list-style-image: url(../images/flag.png);
 }
 
 header img{
@@ -69,7 +68,6 @@ main div{
     line-height: 2.0;
     font-size: 20px;
     background: #AACFD0;
-    
 }
 
 #icon-current-time img{
@@ -99,9 +97,9 @@ main .day-week{
     font-weight: 300;
 }
 
- table, th, td {
+table, th, td {
     border: 1px solid #F4F7F7;
-    padding: 10px;
+    padding: 10px 30px;
     background: #AACFD0;
 }
 
