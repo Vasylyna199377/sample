@@ -11,13 +11,14 @@
     </head>
     
     <body>
-        
+        <!--Unit responsible for page title -->
         <header>
             <h1>L'viv, Ukraine Weather</h1>
-            <img src="images/flag.png" width="70" height="70"></img>
-            <div id="header-title"></div>
+            <a href="http://www.accuweather.com/en/ua/national/satellite"><img src="images/flag.png" width="70" height="70"></img></a>
+            <!--<div id="header-title"></div>-->
         </header>
         
+        <!--Storage container the weather for the current day -->
         <div id='today-weather-container'>
                 <div id="icon-current-time">
                     
@@ -52,12 +53,14 @@
 
         </div>
         
+        <!--Storage container the weather on the 6 days-->
         <main id="weather-container">
             
         </main>
         
         <p id="error"></p>
         
+        <!--Connected file index.js and library jquery-->
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="index.js"></script>
     </body>
