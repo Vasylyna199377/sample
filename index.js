@@ -34,27 +34,21 @@ $(document).ready(function () {
         
         
         //Connected elements: air temperature, description for the current day afternoon!
-        var iconSrcAfternoon = 'http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png';
-        $('#icon-current-afternoon').html('<img src="' + iconSrcAfternoon + '" alt="Icon afternoon" title="' + data.list[0].weather[0].description + '" >');
-        
+      
         $('#afternoon').html(Math.round(data.list[0].temp.day) + '&deg;C');
         
         $('#main-afternoon').html(data.list[0].weather[0].main);
         
         
         //Connected elements: air temperature, description for the current day evening!
-        var iconSrcEvening = 'http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png';
-        $('#icon-current-evening').html('<img src="' + iconSrcEvening + '" alt="Icon afternoon" title="' + data.list[0].weather[0].description + '" >');
-        
+       
         $('#evening').html(Math.round(data.list[0].temp.eve) + '&deg;C');
         
         $('#main-evening').html(data.list[0].weather[0].main);
         
         
         //Connected elements: air temperature, description for the current day night!
-        var iconSrcNight = 'http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png';
-        $('#icon-current-night').html('<img src="' + iconSrcNight + '" alt="Icon afternoon" title="' + data.list[0].weather[0].description + '" >');
-        
+       
         $('#night').html(Math.round(data.list[0].temp.night) + '&deg;C');
         
         $('#main-night').html(data.list[0].weather[0].main);
