@@ -3,6 +3,10 @@
     
     <head>
         <title>Local Weather</title>
+        
+        <link rel="icon" type="image/vnd.microsoft.icon" href="images/faviconka_ru_16.ico">
+
+        <link rel="stylesheet" href="reset.css" type="text/css" />
         <link rel="stylesheet" href="index.css" type="text/css" />
     </head>
     
@@ -10,106 +14,52 @@
         
         <header>
             <h1>L'viv, Ukraine Weather</h1>
+            <img src="images/flag.png" width="70" height="70"></img>
+            <div id="header-title"></div>
         </header>
         
-        <section>
-                <div>
-                    <img src="images/cloudy19.svg" width="170" height="170" alt="weather icon">
+        <div id='today-weather-container'>
+                <div id="icon-current-time">
+                    
                 </div> 
                 
-                <div class="weather_conditions">    
-                    <span>+3 &deg;C</span>
-                    <p>Cloudy<br>Precip: 10%<br>Humidity: 100%<br>Wind: SSE 7 mph</p>
+                <div id="current-weather-box">    
+                    <div id="current-temperature"></div>
+                    <div id="main-current"></div>
+                    <div id="min-temperature"></div>
+                    <div id="max-temperature"></div>
+                    <div id="wind-day"></div>
+                    <div id="humidity-day"></div>
                 </div>
                 
-                <div>
-                    <h2>Afternoon</h2>
-                    <img src="images/snowing9.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>+3 &deg;C</span>
-                    <p>Snow</p>
-                </div>
-                
-                <div>
-                    <h2>Evening</h2>
-                    <img src="images/rainy22.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>0 &deg;C</span>
-                    <p>Light Rain</p>
-                </div>
-                
-                <div>
-                    <h2>Overnight</h2>
-                    <img src="images/cloudy46.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>-2 &deg;C</span>
-                    <p>Cloudy</p>
-                </div>
-        </section>  
+                <table border="1" style="width:30%">
+                    <tr>
+                        <td>Afternoon</td>
+                        <td id="afternoon"></td>
+                        <td id="main-afternoon"></td>
+                    </tr>
+                    <tr>
+                        <td>Evening</td>
+                        <td id="evening"></td>
+                        <td id="main-evening"></td>
+                    </tr>
+                    <tr>
+                        <td>Night</td>
+                        <td id="night"></td>
+                        <td id="main-night"></td>
+                    </tr>
+                </table>
+
+        </div>
         
-        <main>
-                <div>
-                    <h1>FRI</h1>
-                    <h2>Nov 27</h2>
-                    <img src="images/sunny25.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>+1&deg;C -3&deg; C</span>
-                    <p>Cloudy</p>
-                    <a href="/vasylyna199377/weather/page2.html">More</a>
-                </div>
-                
-                 <div>
-                    <h1>SAT</h1>
-                    <h2>Nov 28</h2>
-                    <img src="images/sunny25.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>+2&deg;C -3&deg; C</span>
-                    <p>Cloudy</p>
-                    <a href="/vasylyna199377/weather/page2.html">More</a>
-                </div>
-                
-                 <div>
-                    <h1>SUN</h1>
-                    <h2>Nov 29</h2>
-                    <img src="images/snowing9.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>+1&deg;C -1&deg; C</span>
-                    <p>Snow</p>
-                    <a href="/vasylyna199377/weather/page2.html">More</a>
-                </div>
-                
-                 <div>
-                    <h1>MON</h1>
-                    <h2>Nov 30</h2>
-                    <img src="images/rainy22.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>+3&deg;C -1&deg; C</span>
-                    <p>Rain</p>
-                    <a href="/vasylyna199377/weather/page2.html">More</a>
-                </div>
-                
-                 <div>
-                    <h1>TUE</h1>
-                    <h2>Dec 1</h2>
-                    <img src="images/rainy22.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>+6&deg;C +3&deg; C</span>
-                    <p>Rain</p>
-                    <a href="/vasylyna199377/weather/page2.html">More</a>
-                </div>
-                
-                 <div>
-                    <h1>WED</h1>
-                    <h2>Dec 2</h2>
-                    <img src="images/cloudy19.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>+7&deg;C +4&deg; C</span>
-                    <p>Clouds</p>
-                    <a href="/vasylyna199377/weather/page2.html">More</a>
-                </div>
-                
-                 <div>
-                    <h1>THU</h1>
-                    <h2>Dec 3</h2>
-                    <img src="images/sunny25.svg" width="50" height="50"  alt="weather icon"><br>
-                    <span>+5&deg;C +1&deg; C</span>
-                    <p>Cloudy</p>
-                    <a href="/vasylyna199377/weather/page2.html">More</a>
-                </div>
-        
+        <main id="weather-container">
+            
         </main>
         
+        <p id="error"></p>
+        
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
     </body>
     
 </html>
