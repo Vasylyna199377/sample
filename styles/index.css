@@ -26,7 +26,7 @@ header img{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 50px; 
+    margin: 20px; 
     line-height: 2.0;
     font-size: 25px;
     color: #303841;
@@ -36,6 +36,7 @@ header img{
     flex: 1 auto; 
     max-width: 150px;
     text-align: center; 
+    font-weight: bold;
 }
 
 #current-weather-box{
@@ -61,13 +62,24 @@ main{
 
 main div{
     flex: 1 auto;
-    max-width: 150px;
+    max-width: 200px;
     margin: 5px 40px;
     padding: 5px;
     text-align: center;
     line-height: 2.0;
     font-size: 20px;
     background: #AACFD0;
+}
+
+#hover:hover{
+    transform: scale(1.30);
+    border: solid 2px #F5FAFA;
+}
+
+#hover p{
+    font-size: 15px;
+    color: #140606;
+    font-weight: bold;
 }
 
 #icon-current-time img{
@@ -79,6 +91,7 @@ main div{
     color: #6B0E0E;
     line-height: 1.0;
     margin: 5px;
+    font-weight: bold;
 }
 
 #iconWeek img{
@@ -92,7 +105,7 @@ main .day-week{
     font-size: 25px;
 }
 
-.month-dat{
+.month-data{
     color: #22214A;
     font-weight: 300;
 }
@@ -100,10 +113,16 @@ main .day-week{
 table, th, td {
     border: 1px solid #F4F7F7;
     padding: 10px 30px;
-    background: #AACFD0;
+    background: #C0CEFA;
 }
 
 div span{
     color: #1F4E5F;
     font-size: 20px;
+}
+
+.more{
+    background: #AACFD0;
+    width: 70px;
+    height: 20px;
 }

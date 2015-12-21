@@ -10,7 +10,6 @@ $(document).ready(function () {
     }
     
     var functionOk = function (data) {
-        console.log(data);
         
         //Connected elements: images, air temperature, max temperature, 
         //min temperature, main, speed wind, humidity to the data that 
@@ -21,8 +20,8 @@ $(document).ready(function () {
         $('#main-current').html(data.list[0].weather[0].main);
         $('#min-temperature').html('Min:' + '&nbsp;' + Math.round(data.list[0].temp.min));
         $('#max-temperature').html('Max:' + '&nbsp;' + Math.round(data.list[0].temp.max));
-        $('#humidity-day').html('humidity:'+ '&nbsp;' + data.list[0].humidity + '%');
         $('#wind-day').html('Windy:' + '&nbsp;' + data.list[0].speed + '&nbsp;' + 'm/s');
+        $('#humidity-day').html('humidity:'+ '&nbsp;' + data.list[0].humidity + '%');
 
         //Connected elements: air temperature, description for the current day afternoon!
         $('#afternoon').html(Math.round(data.list[0].temp.day) + '&deg;C');
@@ -49,13 +48,14 @@ $(document).ready(function () {
             
             date.setDate(date.getDate() + 1);
     
-            weatherForDay += '<div>' +
+            weatherForDay += '<div id="hover">' +
                 '<h1 class="day-week">' + getDayNameByNumber(date.getDay()) + '</h1>' +
-                '<h2 class="month-dat"> ' + monthNames[date.getMonth()] + '&nbsp;' + date.getDate() + '</h2>' +
+                '<h2 class="month-data"> ' + monthNames[date.getMonth()] + '&nbsp;' + date.getDate() + '</h2>' +
                 '<div id="iconWeek">' + ('<img src="http://openweathermap.org/img/w/' + data.list[i].weather[0].icon + '.png" alt="Icon afternoon" title="' + data.list[1].weather[0].description + '" >') +'</div>' +
                 '<span>' + Math.round(data.list[i].temp.min) + '&deg;C &nbsp;' + Math.round(data.list[i].temp.max) + '&deg;C</span>' +
                 '<div id="main-week">' + (data.list[i].weather[0].main) +'</div>' +
-                '<a href="/vasylyna199377/weather/page2.html">More</a>' +
+                '<p>' + 'Windy:' + '&nbsp;' + data.list[i].speed + '&nbsp;' + 'm/s' + '</p>' +
+                '<p>' + 'humidity:'+ '&nbsp;' + data.list[i].humidity + '%' + '</p>' +
             '</div>';
         }
         weatherContainer.html(weatherForDay);
